@@ -4,12 +4,20 @@ info:
   version: 1.0.0
 servers:
   - url: https://asia-southeast2-awangga.cloudfunctions.net
+components:
+  securitySchemes:
+    Login:
+      type: apiKey
+      name: Login
+      in: header
 paths:
   /logiccoffee/data/roads:
     post:
       tags:
         - default
       summary: Roads
+      security:
+        - Login: []
       requestBody:
         content:
           application/json:
@@ -19,13 +27,6 @@ paths:
                 long: 107.57568901934862
                 lat: -6.87442753267392
                 max_distance: 600
-      parameters:
-        - name: Login
-          in: header
-          schema:
-            type: string
-          example: >-
-            v4.public.eyJhbGlhcyI6IkZhdGh5YSBGYXRoaW1haCBBenphaHJhIiwiZXhwIjoiMjAyNC0xMi0xNFQwMTo1ODoxMVoiLCJpYXQiOiIyMDI0LTEyLTEzVDA3OjU4OjExWiIsImlkIjoiNjI4NTc1OTA0MzY4MCIsIm5iZiI6IjIwMjQtMTItMTNUMDc6NTg6MTFaIn0Tw5chRvj8owXa-mqv40cRG-IhoZMlX70cdwaFNjLGORNry7FLsGGupdtZR5tUIrd-kiNh6toocte2KeS7V14H
       responses:
         '200':
           description: Successful response
@@ -36,6 +37,8 @@ paths:
       tags:
         - default
       summary: Region
+      security:
+        - Login: []
       requestBody:
         content:
           application/json:
@@ -44,13 +47,6 @@ paths:
               example:
                 long: 107.57568901934862
                 lat: -6.87442753267392
-      parameters:
-        - name: Login
-          in: header
-          schema:
-            type: string
-          example: >-
-            v4.public.eyJhbGlhcyI6IkZhdGh5YSBGYXRoaW1haCBBenphaHJhIiwiZXhwIjoiMjAyNC0xMi0xNFQwMTo1ODoxMVoiLCJpYXQiOiIyMDI0LTEyLTEzVDA3OjU4OjExWiIsImlkIjoiNjI4NTc1OTA0MzY4MCIsIm5iZiI6IjIwMjQtMTItMTNUMDc6NTg6MTFaIn0Tw5chRvj8owXa-mqv40cRG-IhoZMlX70cdwaFNjLGORNry7FLsGGupdtZR5tUIrd-kiNh6toocte2KeS7V14H
       responses:
         '200':
           description: Successful response

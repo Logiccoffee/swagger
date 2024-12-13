@@ -1,0 +1,84 @@
+{
+	"info": {
+		"_postman_id": "4d58f755-f92b-4301-aeaf-013a126594d0",
+		"name": "gis",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33355683"
+	},
+	"item": [
+		{
+			"name": "Roads",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Login",
+						"value": "v4.public.eyJhbGlhcyI6IkZhdGh5YSBGYXRoaW1haCBBenphaHJhIiwiZXhwIjoiMjAyNC0xMi0xNFQwMTo1ODoxMVoiLCJpYXQiOiIyMDI0LTEyLTEzVDA3OjU4OjExWiIsImlkIjoiNjI4NTc1OTA0MzY4MCIsIm5iZiI6IjIwMjQtMTItMTNUMDc6NTg6MTFaIn0Tw5chRvj8owXa-mqv40cRG-IhoZMlX70cdwaFNjLGORNry7FLsGGupdtZR5tUIrd-kiNh6toocte2KeS7V14H",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"long\": 107.57568901934862,\r\n  \"lat\": -6.87442753267392,\r\n  \"max_distance\": 600\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://asia-southeast2-awangga.cloudfunctions.net/logiccoffee/data/roads",
+					"protocol": "https",
+					"host": [
+						"asia-southeast2-awangga",
+						"cloudfunctions",
+						"net"
+					],
+					"path": [
+						"logiccoffee",
+						"data",
+						"roads"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Region",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Login",
+						"value": "v4.public.eyJhbGlhcyI6IkZhdGh5YSBGYXRoaW1haCBBenphaHJhIiwiZXhwIjoiMjAyNC0xMi0xNFQwMTo1ODoxMVoiLCJpYXQiOiIyMDI0LTEyLTEzVDA3OjU4OjExWiIsImlkIjoiNjI4NTc1OTA0MzY4MCIsIm5iZiI6IjIwMjQtMTItMTNUMDc6NTg6MTFaIn0Tw5chRvj8owXa-mqv40cRG-IhoZMlX70cdwaFNjLGORNry7FLsGGupdtZR5tUIrd-kiNh6toocte2KeS7V14H",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"long\": 107.57568901934862,\r\n  \"lat\": -6.87442753267392\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://asia-southeast2-awangga.cloudfunctions.net/logiccoffee/data/region",
+					"protocol": "https",
+					"host": [
+						"asia-southeast2-awangga",
+						"cloudfunctions",
+						"net"
+					],
+					"path": [
+						"logiccoffee",
+						"data",
+						"region"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
